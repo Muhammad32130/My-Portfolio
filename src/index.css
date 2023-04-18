@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;500;700;800;900&display=swap');
+
+
+@layer components{
+    body{
+        font-family: 'Chivo Mono', monospace;
+        overflow-x: hidden;
+    }
+    .slide{
+        position: absolute;
+        opacity: 0;
+        transform: translateX(90%);
+        overflow-x: hidden;
+        font-size: 500;
+        width: 100%;
+    }
+    .hover-slide:hover
+    .slide{
+        transform: translateX(0%);
+        opacity: 1;
+        transition: all 1s ease;
+    }
+    .show{
+        transform: translateY(0%) !important;
+        z-index: 10 !important;
+        transition: all 500ms ease-in-out;
+    }
+    .background{
+        background-image: linear-gradient(to bottom, #081b36, #171328, #180c1a, #12050d, #000000);
+    }
+    .grid-items{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .grid-items:hover{
+        transform: scale(1.1);
+    }
+.grid-items:hover
+.grid-text{
+    transform: translateY(0%);
+    transition: all 300ms ease-in;
+    opacity: 1;
+}
+.grid-text{
+    transform: translateY(-50%);
+    opacity: 1;
+    z-index: -1;
+}
+.up-down{
+    animation: updown;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition: all 1s ease-in-out;
+}
+    @keyframes updown {
+        0%{
+            transform: translateY(0%)
+        }
+        100%{
+            transform: translateY(100%);
+        }
+    }
 }
