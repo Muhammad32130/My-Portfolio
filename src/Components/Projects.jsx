@@ -3,6 +3,7 @@ import project1 from '../images/dddd.png'
 import project2 from '../images/ddsad.png'
 import project3 from '../images/dsicord.png'
 import project4 from '../images/dsa2w.png'
+import certificate from '../images/Muhammads-Certificate-of-Completion-1.png'
 import Modal from './Modal'
 
 function Projects({modal, setmodal}) {
@@ -24,7 +25,7 @@ function Projects({modal, setmodal}) {
           </h2>
         </div>
         <div className='grid-items'>
-          <img className='w-16 sm:w-20' src="https://assets.stickpng.com/thumbs/5848309bcef1014c0b5e4a9a.png" alt="" />
+          <img className='w-16 sm:w-20' src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png" alt="" />
           <h2 className='grid-text'>
           Redux
           </h2>
@@ -115,6 +116,14 @@ This is a simple forum site like reddit made for users to chat and discuss, the 
 </div>
         </div>
         <img className='w-[100%]' src={project4} alt="" />
+          </div>
+        </div>
+        <div id='#certificate' className='text-center mt-28'>
+          <h1 className='mb-10 xl:text-[38px] sm:my-16 sm:text-[22px]'>
+          Certifications
+          </h1>
+          <div className='w-[95%] mx-auto rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
+            <img className='w-[100%]' src={certificate} alt="" />
           </div>
         </div>
        </div>
