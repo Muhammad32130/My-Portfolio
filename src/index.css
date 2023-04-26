@@ -6,6 +6,9 @@
 
 
 @layer components{
+    html{
+        scroll-behavior: smooth;
+    }
     body{
         font-family: 'Chivo Mono', monospace;
         overflow-x: hidden;
@@ -67,4 +70,7 @@
             transform: translateY(100%);
         }
     }
+a{
+    scroll-behavior: smooth;
+}
 }
