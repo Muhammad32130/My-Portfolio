@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from './images/ma-low-resolution-logo-black-on-transparent-background.png'
 import svg from './images/icons8-menu.svg'
 
@@ -8,9 +8,16 @@ function Nav({setmodal, modal}) {
     setmodal(true)
 setclicked(second)
   }
+  useEffect(()=>{
+    if(modal){
+      document.body.style.overflow = "hidden"
+    }else{
+      document.body.style.overflow = "scroll"
+    }
+  })
 
   return (
-    <div className="h-20 flex w-[100%]  items-center overflow-x-hidden border-b border-[gray]">
+    <div className="h-20 flex w-[100%] items-center overflow-x-hidden border-b border-[gray]">
         <nav className="flex justify-between items-center">
           <div className=" ml-2 lg:ml-8 w-[10%] lg:w-[4%] sm:w-[7%]">
            <img className='invert' src={logo} alt="" />
@@ -22,7 +29,7 @@ setclicked(second)
                 <a className="sm:px-4" href="#Projects">Projects</a>
                 <a className="sm:px-4" href="#" onClick={stateHandler}>Contact</a>
               </div>
-              <div onClick={()=>{setclicked(false)}} className={`absolute w-[100%] h-[100%] top-0 bg-[gray]/30 -z-10 ${clicked && 'z-10'} ${modal && 'z-10'} `}></div>
+              <div onClick={()=>{setmodal(false)}} className={`absolute w-[100%] h-[100%] top-0 bg-[gray]/30 -z-10 ${clicked && 'z-10'} ${modal && 'z-10'} `}></div>
             <ul className={`mr-2 justify-between absolute right-[10%] w-[80%] top-0 text-white bg-[#0D1830] border-[gray] translate-y-[-100%] bg- border-t-0 rounded-b-xl border ${modal && '-='} -z-10 ${clicked && 'show'}`}>
                 <div className="flex flex-col mb-6 mt-4 items-center">
                   <div className='w-[100%] flex justify-end mr-8'>

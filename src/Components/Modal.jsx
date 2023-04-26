@@ -1,19 +1,51 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
+import check from '../images/Eo_circle_green_checkmark.svg.png'
+import spin from '../images/spin.png'
 
 function Modal({modal, setmodal}) {
+
+    const [loading, setloading] = useState(false)
+    const [spinner, setspinner] = useState(false)
+
         const form = useRef();
       
         const sendEmail = (e) => {
           e.preventDefault();
-      
+          setspinner(true)
           emailjs.sendForm('service_4etywk5', 'template_9c9svdw', form.current, 'afAh1yi6uFuDhPzP1')
-            .then((result) => {
-                console.log(result.text);
+          .then((result) => {
+              setspinner(false)
+              setloading(true)
             }, (error) => {
                 console.log(error.text);
             });
         };
+
+        function currentloading(){
+            if(spinner){
+                return(
+                    <div className=' flex justify-center items-center h-[80%] w-[100%]' >
+<img className=' w-[50%] animate-spin' src={spin} alt="" />
+    </div>
+                )
+            }
+            else if(loading){
+                return(
+                    <div className='bg-[green] w-[100%] absolute top-0 left-0 h-[100%]'>
+                        <div className='w-[100%] h-[100%] flex justify-center flex-col items-center'>
+                        <img className='w-[20%]' src={check} alt="" />
+                            <h1 className='mt-20 mx-8'>
+                        Done! I will be in contact with you as soon as possible!
+                            </h1>
+                        </div>
+                    </div>
+                )
+            }
+            
+            
+        }
+    
 
 
   return (
@@ -31,9 +63,12 @@ function Modal({modal, setmodal}) {
 
         </div>
         <div className={`${modal && 'translate-y-[0%] '}bg-[#C7C7CC] xl:pl-6 duration-500 transition-all pt-4 pl-2 w-[50%] translate-y-[-100%]`}>
-            <div  onClick={()=>{setmodal(false)}} className='cursor-pointer w-[100%] pb-4 flex justify-end pr-4'>
+            <div  onClick={()=>{setmodal(false)}} className='cursor-pointer absolute left-[90%] z-20 w-[100%] pb-4  pr-4'>
             <svg className='w-4 lg:w-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
             </div>
+            {(!spinner && !loading) ? 
+            <div>
+
             <h1 className='xl:text-[28px]'>
 
     Contact Me
@@ -42,20 +77,25 @@ function Modal({modal, setmodal}) {
     <form ref={form} onSubmit={(e)=>sendEmail(e)} className=' mt-10 lg:mt-4'>
         <div className='text-[16px] md:text-[18px] md:mt-4 xl:text-[20px]'>
         <label>Email:</label>
-        <input className='text-[black] md:py-1 md:mt-2 md:text-[14px] xl:text-[18px] text-[10px] outline-none w-[90%] h-[5%]' type="Email" name="user_email" placeholder='e-mail' />
+        <input required className='text-[black] md:py-1 md:mt-2 md:text-[14px] xl:text-[18px] text-[10px] outline-none w-[90%] h-[5%]' type="Email" name="user_email" placeholder='e-mail' />
         </div>
         <div className='text-[16px] flex-col flex md:text-[18px] md:mt-4 xl:text-[20px]'>
         <label>Name:</label>
-        <input className='text-[black] md:py-1 md:mt-2 md:text-[14px] xl:text-[18px] text-[10px] outline-none w-[90%] h-[5%]' type="Name" name="user_name" placeholder='Name' />
+        <input required className='text-[black] md:py-1 md:mt-2 md:text-[14px] xl:text-[18px] text-[10px] outline-none w-[90%] h-[5%]' type="Name" name="user_name" placeholder='Name' />
         </div>
         <div className='text-[16px] md:text-[18px] md:mt-4  xl:text-[20px]'>
         <label>Message:</label>
-        <textarea name="message" className='outline-none text-[black] md:py-1 md:mt-2 md:text-[14px] xl:text-[18px] text-[10px] w-[90%]' id="" cols="15" rows="5"></textarea>
+        <textarea name="message" required className='outline-none text-[black] md:py-1 md:mt-2 md:text-[14px] xl:text-[18px] text-[10px] w-[90%]' id="" cols="15" rows="5"></textarea>
         </div>
         <button value="Send" className='bg-[green] px-2 xl:px-6 xl:text-[20px] mt-4 text-center'>Send It!</button>
 
     </form>
-    </div>
+            </div>
+    
+    </div> :
+   currentloading()
+    
+    }
         </div>
         </div>
     </div>

@@ -26,7 +26,7 @@ useEffect(()=>{
 
 
   return (
-    <div className='h-[calc(100%-5rem)] flex justify-center '>
+    <div id="particles-js" className='h-[calc(100%-5rem)] flex justify-center '>
 <div className='mt-24 mx-2 flex flex-col items-center'>
     <div>
 <div className='flex mx-4 xl:mx-10 2xl:mb-4 lg:mb-8'>
