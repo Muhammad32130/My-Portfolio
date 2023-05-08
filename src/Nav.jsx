@@ -17,7 +17,7 @@ setclicked(second)
   })
 
   return (
-    <div className="h-20 flex w-[100%] items-center overflow-x-hidden border-b border-[gray]">
+    <div className="h-20 flex w-[100%] items-center overflow-x-clip border-b border-[gray]">
         <nav className="flex justify-between items-center">
           <div className=" ml-2 lg:ml-8 w-[10%] lg:w-[4%] sm:w-[7%]">
            <img className='invert' src={logo} alt="" />
