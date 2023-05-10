@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import logo from './images/ma-low-resolution-logo-black-on-transparent-background.png'
 import svg from './images/icons8-menu.svg'
+import invert from './images/61136.png'
 
-function Nav({setmodal, modal}) {
+function Nav({setmodal, modal, ivert, setinvert}) {
   const [clicked, setclicked ] = useState(false) 
   function stateHandler(first, second){
     setmodal(true)
@@ -21,12 +22,28 @@ setclicked(second)
       setclicked(false)
     }
   }
+  useEffect(()=>{
+    
+  })
+  function invertHandle(){
+    const background = document.querySelectorAll('.bg')
+    setinvert(!ivert)
+    if(!ivert){
+      document.body.style.color = 'black'
+        background[0].style.backgroundColor= "#ffe6ff"
+      background[0].classList.remove("background")
+      
+    }else if(ivert){
+      document.body.style.color = "white"
+      background[0].classList.add("background")
+    }
+  }
 
   return (
     <div className="h-20 flex w-[100%] items-center overflow-x-clip border-b border-[gray]">
         <nav className="flex justify-between items-center">
           <div className=" ml-2 lg:ml-8 w-[10%] lg:w-[4%] sm:w-[7%]">
-           <img className='invert' src={logo} alt="" />
+           <img className={`invert ${ivert && 'invert-0'}`} src={logo} alt="" />
           </div>
             <img onClick={()=>{setclicked(!clicked)}} className='sm:hidden invert w-[8%] mr-2' src={svg} alt="" />
               <div className=' hidden sm:flex sm:justify-between sm:mr-5'>
@@ -34,9 +51,10 @@ setclicked(second)
               <a className="sm:px-4"  href="#">About</a>
                 <a className="sm:px-4" href="#Projects">Projects</a>
                 <a className="sm:px-4" href="#" onClick={stateHandler}>Contact</a>
+                <a className="sm:px-4" href='#' onClick={()=>invertHandle()} ><img className={`w-6 invert ${ivert&&'invert-0'}`} src={invert} alt="" /></a>
               </div>
               <div onClick={()=>{clickHandle()}} className={`absolute w-[100%] h-screen top-0 bg-[gray]/30 -z-10 ${clicked && 'z-10'} ${modal && 'z-10'} `}></div>
-            <ul className={`mr-2 justify-between absolute right-[10%] w-[80%] top-0 text-white bg-[#0D1830] border-[gray] translate-y-[-100%] bg- border-t-0 rounded-b-xl border ${modal && '-='} -z-10 ${clicked && 'show'}`}>
+            <ul className={`mr-2 justify-between absolute right-[10%] w-[80%] top-0  bg-[#0D1830] border-[gray] translate-y-[-100%] bg- border-t-0 rounded-b-xl border ${modal && '-='} -z-10 ${clicked && 'show'}`}>
                 <div className="flex flex-col mb-6 mt-4 items-center">
                   <div className='w-[100%] flex justify-end mr-8'>
                   <button className="w-4 text-end" onClick={()=>{setclicked(false)}}>

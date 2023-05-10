@@ -9,9 +9,13 @@
     html{
         scroll-behavior: smooth;
     }
+    .bg{
+        transition: all 500ms ease-in-out;
+    }
     body{
         font-family: 'Chivo Mono', monospace;
         overflow-x: hidden !important;
+        color: white;
     }
     .slide{
         position: absolute;
@@ -21,6 +25,7 @@
         font-size: 500;
         width: 100%;
     }
+ 
     .hover-slide:hover
     .slide{
         transform: translateX(0%);
@@ -43,6 +48,7 @@
 
     }
     .grid-items:hover{
+        
         transform: scale(1.1);
     }
 .grid-items:hover

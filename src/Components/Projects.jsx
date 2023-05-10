@@ -13,7 +13,7 @@ function Projects({modal, setmodal}) {
 
 
   return (
-    <section className='text-white mt-20'>
+    <section className='  mt-20'>
       <Modal modal={modal} setmodal={setmodal}/>
         <h1 data-aos="zoom-in-right" className=' xl:text-[28px] sm:text-[20px] text-center'>
           What I'm currently learning
@@ -60,7 +60,7 @@ function Projects({modal, setmodal}) {
         </h1>
         <div data-aos="zoom-out-down" className=' w-[100%] overflow-x-clip flex justify-center border-hover py-10 relative mb-10 sm:mb-20'>
 
-          <div className='w-[95%] overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
+          <div className='text-white w-[95%] overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
         <div className='bg-[gray]/70 overflow-x-clip overlay lg:text-[28px] sm:text-[20px] h-full w-[100%] text-[12px] slide'>
           <div className=' overflow-x-clip mt-2 xl:mt-6'>
 Netflix Clone
@@ -77,7 +77,7 @@ This Project is a clone of Netflix. It takes backend data from TMDB movies and y
           </div>
         </div>
         <div data-aos="zoom-out-up" className='w-[100%] overflow-x-clip flex justify-center mb-10 sm:mb-20'>
-          <div className='w-[95%] overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
+          <div className='text-white w-[95%] overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
         <div className='bg-[gray]/70 overflow-x-clip overlay lg:text-[28px] sm:text-[20px] h-full w-[100%] text-[12px] slide'>
           <div className=' overflow-x-clip mt-2 xl:mt-6'>
 E-Commerce
@@ -94,7 +94,7 @@ This project was designed and made by Muhammad Askari. It is a website that take
           </div>
         </div>
         <div data-aos="zoom-out-left" className='w-[100%] overflow-x-clip flex justify-center mb-10 sm:mb-20 '>
-          <div className='w-[95%] overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
+          <div className='text-white w-[95%] overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
         <div className='bg-[gray]/70 overflow-x-clip lg:text-[28px] overlay sm:text-[20px] h-full w-[100%] text-[12px] slide'>
           <div className=' overflow-x-clip mt-2 xl:mt-6'>
 Discord Clone
@@ -111,7 +111,7 @@ This project was designed and made by Muhammad Askari. It is a clone of a well k
           </div>
         </div>
         <div data-aos="zoom-out-right" className='overflow-x-clip flex justify-center'>
-          <div className='w-[95%] overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
+          <div className='text-white w-[95%] overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
         <div className='bg-[gray]/70 overflow-x-clip lg:text-[28px] overlay sm:text-[20px] h-full w-[100%] text-[12px] slide'>
           <div className=' overflow-x-clip mt-2 xl:mt-6'>
           Forum Website
@@ -131,7 +131,7 @@ This is a simple forum site like reddit made for users to chat and discuss, the 
           <h1 className='mb-10 xl:text-[38px] sm:my-16 sm:text-[22px]'>
           Certifications
           </h1>
-          <div className='w-[95%] mx-auto overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
+          <div className='w-[95%] shadow-xl mx-auto overflow-x-clip rounded sm:w-[80%] xl:w-[60%] relative overflow-hidden hover-slide'>
             <img className='w-[100%]' src={certificate} alt="" />
           </div>
         </div>
