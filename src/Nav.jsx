@@ -9,12 +9,18 @@ function Nav({setmodal, modal}) {
 setclicked(second)
   }
   useEffect(()=>{
-    if(modal){
+    if(modal || clicked){
       document.body.style.overflow = "hidden"
     }else{
       document.body.style.overflow = "scroll"
     }
   })
+  function clickHandle(){
+    if(modal||clicked){
+      setmodal(false)
+      setclicked(false)
+    }
+  }
 
   return (
     <div className="h-20 flex w-[100%] items-center overflow-x-clip border-b border-[gray]">
@@ -29,7 +35,7 @@ setclicked(second)
                 <a className="sm:px-4" href="#Projects">Projects</a>
                 <a className="sm:px-4" href="#" onClick={stateHandler}>Contact</a>
               </div>
-              <div onClick={()=>{setmodal(false)}} className={`absolute w-[100%] h-[100%] top-0 bg-[gray]/30 -z-10 ${clicked && 'z-10'} ${modal && 'z-10'} `}></div>
+              <div onClick={()=>{clickHandle()}} className={`absolute w-[100%] h-screen top-0 bg-[gray]/30 -z-10 ${clicked && 'z-10'} ${modal && 'z-10'} `}></div>
             <ul className={`mr-2 justify-between absolute right-[10%] w-[80%] top-0 text-white bg-[#0D1830] border-[gray] translate-y-[-100%] bg- border-t-0 rounded-b-xl border ${modal && '-='} -z-10 ${clicked && 'show'}`}>
                 <div className="flex flex-col mb-6 mt-4 items-center">
                   <div className='w-[100%] flex justify-end mr-8'>

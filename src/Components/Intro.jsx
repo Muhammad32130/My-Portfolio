@@ -23,7 +23,6 @@ function Intro() {
         TagCloud(container, texts, options)
     }, [loaded])
 
-    console.log(showmore)
 
 
 

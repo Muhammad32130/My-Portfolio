@@ -53,10 +53,10 @@ function Modal({modal, setmodal}) {
         <div className='flex h-[80%]'>
         <div className={`${modal ? 'translate-y-[0%]': 'translate-y-[100%]' } bg-[#6A4C93] duration-500 transition-all  w-[50%] `}>
             <div className='flex flex-col '>
-        <h1 className='pt-12 xl:text-[28px] pl-2 lg:mx-2'>
+        <h1 className='pt-12 lg:pt-4 xl:text-[28px] pl-2 lg:mx-2'>
             About Me
         </h1>
-        <p className='text-[10px] xl:text-[20px] lg:text-[16px] lg:leading-8 lg:mx-2 md:text-[14px] md:leading-6 px-2 mt-4'>
+        <p className='text-[10px] xl:text-[20px] lg:text-[10px] lg:leading-8 lg:mx-2 md:text-[14px] md:leading-6 px-2 mt-4'>
             Hi I'm from Pakitan and a lifelong student of coding. I attended Bellaire High School and College for coding, but during college I decided to learn coding by myself through a course called frontend simplified and I have made amazing progress so far. I have created projects using JavaScript, HTML, Typescript, CSS, Stripe, Firebase and ETC. Please checkout my projects and contact me so I can be a helpful to your company.
         </p>
             </div>
@@ -74,7 +74,7 @@ function Modal({modal, setmodal}) {
     Contact Me
             </h1>
     <div className='flex flex-col'>
-    <form ref={form} onSubmit={(e)=>sendEmail(e)} className=' mt-10 lg:mt-4'>
+    <form ref={form} onSubmit={(e)=>sendEmail(e)} className=' mt-10 lg:mt-0'>
         <div className='text-[16px] md:text-[18px] md:mt-4 xl:text-[20px]'>
         <label>Email:</label>
         <input required className='text-[black] md:py-1 md:mt-2 md:text-[14px] xl:text-[18px] text-[10px] outline-none w-[90%] h-[5%]' type="Email" name="user_email" placeholder='e-mail' />
@@ -85,7 +85,7 @@ function Modal({modal, setmodal}) {
         </div>
         <div className='text-[16px] md:text-[18px] md:mt-4  xl:text-[20px]'>
         <label>Message:</label>
-        <textarea name="message" required className='outline-none text-[black] md:py-1 md:mt-2 md:text-[14px] xl:text-[18px] text-[10px] w-[90%]' id="" cols="15" rows="5"></textarea>
+        <textarea name="message" required className='outline-none text-[black] md:py-1 md:mt-2 md:text-[14px] xl:text-[18px] lg:h-[70px] text-[10px] w-[90%]' id="" cols="15" rows="5"></textarea>
         </div>
         <button value="Send" className='bg-[green] px-2 xl:px-6 xl:text-[20px] mt-4 text-center'>Send It!</button>
 
