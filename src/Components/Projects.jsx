@@ -18,17 +18,11 @@ function Projects({modal, setmodal}) {
         <h1 data-aos="zoom-in-right" className=' xl:text-[28px] sm:text-[20px] text-center'>
           What I'm currently learning
         </h1>
-        <div className='grid grid-cols-3 sm:gap-x-12 w-fit mx-auto gap-x-10 gap-y-6 items-center mt-10 mb-8'>
+        <div className='grid grid-cols-2 sm:gap-x-12 w-fit mx-auto gap-x-10 gap-y-6 items-center mt-10 mb-8'>
         <div className='grid-items'>
           <img className='w-16 sm:w-20' src="https://upload.wikimedia.org/wikipedia/commons/6/67/NodeJS.png" alt="" />
           <h2 className='grid-text'>
           NodeJs
-          </h2>
-        </div>
-        <div className='grid-items'>
-          <img className='w-16 sm:w-20' src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png" alt="" />
-          <h2 className='grid-text'>
-          Redux
           </h2>
         </div>
         <div className='grid-items'>
@@ -37,8 +31,6 @@ function Projects({modal, setmodal}) {
           NextJs
           </h2>
         </div>
-        </div>
-        <div className='flex justify-center'>
         <div className='grid-items'>
           <img className='w-16 sm:w-20' src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="" />
           <h2 className='grid-text'>

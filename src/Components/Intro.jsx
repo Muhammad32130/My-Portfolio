@@ -12,7 +12,7 @@ function Intro({ivert, setinvert}) {
     const container = '.tagcloud';
     const texts = [
         'JavaScript', 'ReactJS', 'HTML5',
-        'CSS3', 'TailwindCSS', 'Git',
+        'CSS3', 'TailwindCSS', 'Git','Firebase', 'Redux'
         ,
     ];
     const options = {
