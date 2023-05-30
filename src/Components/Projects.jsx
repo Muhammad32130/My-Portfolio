@@ -25,18 +25,7 @@ function Projects({modal, setmodal}) {
           NodeJs
           </h2>
         </div>
-        <div className='grid-items'>
-          <img className='w-16 sm:w-20' src="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png" alt="" />
-          <h2 className='grid-text'>
-          NextJs
-          </h2>
-        </div>
-        <div className='grid-items'>
-          <img className='w-16 sm:w-20' src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="" />
-          <h2 className='grid-text'>
-          TypeScript
-          </h2>
-        </div>
+      
         <div className='grid-items ml-8'>
           <img className='w-16 sm:w-20' src={angular} alt="" />
           <h2 className='grid-text'>

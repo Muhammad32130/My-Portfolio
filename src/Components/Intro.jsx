@@ -13,7 +13,7 @@ function Intro({ivert, setinvert}) {
     const texts = [
         'JavaScript', 'ReactJS', 'HTML5',
         'CSS3', 'TailwindCSS', 'Git','Firebase', 'Redux'
-        ,
+        ,"NEXTJS", "TypeScript"
     ];
     const options = {
         keep: true,
