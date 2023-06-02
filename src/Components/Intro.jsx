@@ -38,7 +38,7 @@ function Intro({ivert, setinvert}) {
                                 Hi, <br /> I'm Muhammad Askari
                             </h1>
                             <p data-aos="fade-up" className='xl:text-[26px] lg:leading-9  xl:mt-10 xl:leading-loose lg:text-start lg:w-[100%] sm:text-[18px] sm:mt-4 text-center mt-4 text-sm leading-7'>
-                                I'm learning to become a <span className='text-[red]'>
+                                I'm a <span className='text-[red]'>
                                     Frontend Sofware Engineer.
                                 </span>
                                 I'm dedicated and ready to start working at your company and excel at
