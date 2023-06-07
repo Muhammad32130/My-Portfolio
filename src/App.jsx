@@ -12,7 +12,7 @@ function App() {
   const [ivert, setinvert] = useState(false)
 
   return (
-    <div className='bg background h-full '>
+    <div className='bg-[#141414]  h-full '>
     <Nav ivert={ivert} setinvert={setinvert} setmodal={setmodal} modal={modal} />
     <Intro ivert={ivert} setinvert={setinvert}/>
     <Projects setmodal={setmodal} modal={modal}/>

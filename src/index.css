@@ -37,9 +37,7 @@
         z-index: 10 !important;
         transition: all 500ms ease-in-out;
     }
-    .background{
-        background-image: linear-gradient(to bottom, #081b36, #171328, #180c1a, #12050d, #000000);
-    }
+
     .grid-items{
         text-align: center;
         display: flex;
