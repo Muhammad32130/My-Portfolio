@@ -67,7 +67,7 @@ setclicked(second)
             </ul>
         </nav>
       </div>
-      <div className='fixed h-[100%] w-10 top-0 bg-black'>
+      <div className='fixed h-[100%] w-10 top-0 bg-[#1a1818]'>
         <div className='flex flex-col items-center justify-between h-[100%]'>
       <img className={`invert mt-6 w-[100%] ${ivert && 'invert-0'}`} src={logo} alt="" />
         <div>
