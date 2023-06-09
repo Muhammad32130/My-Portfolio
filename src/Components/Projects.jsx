@@ -6,7 +6,8 @@ import project4 from '../images/dsa2w.png'
 import certificate from '../images/Muhammads-Certificate-of-Completion-1.png'
 import Modal from './Modal'
 import angular from '../images/2048px-Angular_full_color_logo.svg.png'
-
+import  C from '../images/dddsaas.png'
+import NET from '../images/1_oc0z3w_7TKgE0oSyiqpnRw.png'
 function Projects({modal, setmodal}) {
 
 
@@ -30,6 +31,18 @@ function Projects({modal, setmodal}) {
           <img className='w-16 sm:w-20' src={angular} alt="" />
           <h2 className='grid-text'>
           Angular
+          </h2>
+        </div>
+        <div className='grid-items ml-8'>
+          <img className='w-16 sm:w-20' src={C} alt="" />
+          <h2 className='grid-text'>
+          C#
+          </h2>
+        </div>
+        <div className='grid-items ml-8'>
+          <img className='w-16 sm:w-20' src={NET} alt="" />
+          <h2 className='grid-text'>
+          .NET
           </h2>
         </div>
         </div>
