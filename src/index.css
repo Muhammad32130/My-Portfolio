@@ -8,13 +8,14 @@
 @layer components{
     html{
         scroll-behavior: smooth;
+        overflow-x: hidden !important;
     }
     .bg{
         transition: all 500ms ease-in-out;
     }
     body{
         font-family: 'Chivo Mono', monospace;
-        overflow-x: hidden !important;
+        overflow: hidden !important;
         color: white;
     }
     .slide{
