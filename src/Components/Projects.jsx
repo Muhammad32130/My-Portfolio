@@ -76,7 +76,7 @@ This Project is a clone of Netflix. It takes backend data from TMDB movies and y
           <div className=' overflow-x-clip mt-2 xl:mt-6'>
 GoCar Rentals
 <p className='text-[10px] xl:text-[24px] font-light xl:mt-4 xl:mb-2 lg:leading-10 lg:text-[22px] lg:px-2 lg:mb-2 sm:text-[14px] sm:mt-6'>
-This project was designed and made by Muhammad Askari. It a car rental website that gets car data from a backend API and pictures from Unsplash API. The project combines the two APIs and shows cars that can be rented. Project was made using ReactJS and TailwindCSS. The project also use MUI and other libraries. 
+This project was designed and made by Muhammad Askari and Faiz Zaidi in a collaboration using GIT. It a car rental website that gets car data from a backend API and pictures from Unsplash API. The project combines the two APIs and shows cars that can be rented. Project was made using ReactJS and TailwindCSS. The project also use MUI and other libraries. 
 </p>
           </div>
 <div className='flex justify-center mt-1 invert overflow-x-hidden'>
